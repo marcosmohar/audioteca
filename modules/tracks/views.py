@@ -5,4 +5,4 @@ from rest_framework import viewsets
 
 class TrackViewSet(viewsets.ModelViewSet):
     queryset = Track.objects.all().select_related('album')
-    serializer_class = TrackAlbumSerializer
+    serializer_class = TrackModelSerializer
