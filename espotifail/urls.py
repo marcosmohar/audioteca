@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^api/v1/', include('modules.artists.urls', namespace='artists')),
     url(r'^api/v1/', include('modules.albums.urls', namespace='albums')),
     url(r'^api/v1/', include('modules.tracks.urls', namespace='tracks')),
+    # haces un POST con tu username y password y te regresa un jwt
+    url(r'^api/v1/auth/', obtain_jwt_token, name='auth')
 ]
