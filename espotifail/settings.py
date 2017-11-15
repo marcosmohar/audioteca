@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'modules.tracks',
     'modules.albums',
     'modules.users',
-    'rest_framework'
+    'rest_framework',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
