@@ -22,6 +22,6 @@ urlpatterns = [
     url(r'^api/v1/', include('modules.artists.urls', namespace='artists')),
     url(r'^api/v1/', include('modules.albums.urls', namespace='albums')),
     url(r'^api/v1/', include('modules.tracks.urls', namespace='tracks')),
-    # haces un POST con tu username y password y te regresa un jwt
-    url(r'^api/v1/auth/', obtain_jwt_token, name='auth')
+    # Traer url de donde puedes registrar aplicaciones que vayas creando con oauth
+    url(r'^o/', include('oauth2_provider.urls', namespace="oauth2")),
 ]
