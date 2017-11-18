@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^api/v1/', include('modules.albums.urls', namespace='albums')),
     url(r'^api/v1/', include('modules.tracks.urls', namespace='tracks')),
     # haces un POST con tu username y password y te regresa un jwt
-    url(r'^api/v1/auth/', obtain_jwt_token, name='auth')
+    url(r'^api/v1/auth/', obtain_jwt_token, name='auth'),
+    url(r'^api/v1/docs/', include('rest_framework_docs.urls')),
 ]

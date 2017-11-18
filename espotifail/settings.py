@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'modules.albums',
     'modules.users',
     'rest_framework',
-    'django_filters'
+    'django_filters', 
+    'rest_framework_docs',
 ]
 
 MIDDLEWARE = [
