@@ -1,10 +1,14 @@
+import os 
+
 from .base import *
 
 import dj_database_url
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["*"]
+SECRET_KEY = os.getenv("SECRET_KEY", None)
+
+ALLOWED_HOSTS = ["https://espotifail.herokuapp.com/"]
 
 DATABASES = dict()
 
