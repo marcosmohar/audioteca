@@ -8,7 +8,7 @@ DEBUG = False
 
 SECRET_KEY = os.getenv("SECRET_KEY", None)
 
-ALLOWED_HOSTS = ["https://espotifail.herokuapp.com/"]
+ALLOWED_HOSTS = ["espotifail.herokuapp.com/"]
 
 DATABASES = dict()
 
