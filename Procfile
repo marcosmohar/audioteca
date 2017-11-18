@@ -1,0 +1,1 @@
+web: gunicorn espotifail.wgsi --log-file -
