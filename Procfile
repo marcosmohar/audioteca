@@ -1,1 +1,1 @@
-web: gunicorn espotifail.wgsi --log-file -
+web: gunicorn espotifail.wsgi --log-file -
