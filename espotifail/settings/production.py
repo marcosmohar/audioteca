@@ -4,15 +4,23 @@ from .base import *
 
 import dj_database_url
 
-DEBUG = True
 
 SECRET_KEY = os.getenv("SECRET_KEY", None)
 
-ALLOWED_HOSTS = ["espotifail.herokuapp.com"]
+DEBUG = False
 
-DATABASES = dict()
+ALLOWED_HOSTS = [os.getenv("HOSTS", None)]
 
 # lee la variable de entorno de heroku, timeout 500s
-DATABASES["default"] = dj_database_url.config(conn_max_age=500)
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': os.getenv("DBNAME", None),
+        'USER': os.getenv("DBUSER", None,
+        'PASSWORD': os.getenv("DBPASS", None,
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
 
 STATIC_ROOT = os.path.join(os.getcwd(), "static")
